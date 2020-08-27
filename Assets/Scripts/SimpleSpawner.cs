@@ -19,6 +19,7 @@ public class SimpleSpawner : MonoBehaviour
 
     public GameObject spawnMarker;
 
+    private bool canSpawnAgain;
     void Start()
     {
         spawnMarker.SetActive(false);
@@ -29,18 +30,28 @@ public class SimpleSpawner : MonoBehaviour
     // Spawns enemies based on spawnRateTimer float.
     IEnumerator SpawnTimer()
     {
+        // Waits a delay when awake for first time.
         if (amAwakened)
         {
             amAwakened = false;
+            canSpawnAgain = false;
             StartCoroutine(MarkerTime());
-            yield return new WaitForSecondsRealtime(spawnRateTimer);
+            while (canSpawnAgain == false)
+            {
+                yield return null;
+            }
             transform.position = spawnMarker.transform.position;
         }
         // Put "player" transform into enemy's target slot in SimpleEnemy.cs upon instantiation.
         var spawnedEnemy = Instantiate(enemy, transform.position, quaternion.identity);
         spawnedEnemy.GetComponent<SimpleEnemy>().target = player;
-        StartCoroutine(MarkerTime());
-        yield return new WaitForSecondsRealtime(spawnRateTimer);
+        canSpawnAgain = false;
+        StartCoroutine(MarkerTime());      
+        while (canSpawnAgain == false)
+        {
+            yield return null;
+        }
+        
         StartCoroutine(SpawnTimer());
     }
 
@@ -52,5 +63,6 @@ public class SimpleSpawner : MonoBehaviour
         yield return new WaitForSecondsRealtime(spawnRateTimer/2);
         spawnMarker.SetActive(false);
         transform.position = spawnMarker.transform.position;
+        canSpawnAgain = true;
     }
 }
