@@ -17,8 +17,11 @@ public class SimpleSpawner : MonoBehaviour
     // Waits a delay when awake for first time.
     private bool amAwakened = true;
 
+    public GameObject spawnMarker;
+
     void Start()
     {
+        spawnMarker.SetActive(false);
         player = GameObject.FindWithTag("Player").GetComponent<Transform>();
         StartCoroutine(SpawnTimer());
     }
@@ -29,14 +32,25 @@ public class SimpleSpawner : MonoBehaviour
         if (amAwakened)
         {
             amAwakened = false;
+            StartCoroutine(MarkerTime());
             yield return new WaitForSecondsRealtime(spawnRateTimer);
-            transform.position = new Vector3(transform.position.x, Random.Range(-7.5f, 7.5f), transform.position.z);
+            transform.position = spawnMarker.transform.position;
         }
         // Put "player" transform into enemy's target slot in SimpleEnemy.cs upon instantiation.
         var spawnedEnemy = Instantiate(enemy, transform.position, quaternion.identity);
         spawnedEnemy.GetComponent<SimpleEnemy>().target = player;
+        StartCoroutine(MarkerTime());
         yield return new WaitForSecondsRealtime(spawnRateTimer);
-        transform.position = new Vector3(transform.position.x, Random.Range(-7.5f, 7.5f), transform.position.z);
         StartCoroutine(SpawnTimer());
+    }
+
+    IEnumerator MarkerTime()
+    {
+        yield return new WaitForSecondsRealtime(spawnRateTimer/2);
+        spawnMarker.transform.position = new Vector3(Random.Range(-8.5f, 8.5f), Random.Range(-7.5f, 7.5f), transform.position.z);
+        spawnMarker.SetActive(true);
+        yield return new WaitForSecondsRealtime(spawnRateTimer/2);
+        spawnMarker.SetActive(false);
+        transform.position = spawnMarker.transform.position;
     }
 }
