@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleEnemy.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <marker date="1598497754255" expanded="false" signature="6:78" ph="..." />
                 <marker date="1598497754255" expanded="true" signature="215:453" ph="{...}" />
@@ -47,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleSpawner.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="608">
@@ -61,6 +61,17 @@
                 <marker date="1598499551807" expanded="true" signature="985:1048" ph="{...}" />
                 <marker date="1598499551807" expanded="true" signature="1488:1539" ph="{...}" />
                 <marker date="1598499551807" expanded="true" signature="1622:2064" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../FleeBusterMechanic/Assets/Scripts/UITimer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,6 +126,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SwordHitbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../FleeBusterMechanic/Assets/Scripts/UITimer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundEffectObj.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimpleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimpleEnemy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -131,9 +143,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1273" />
+    <option name="x" value="844" />
     <option name="width" value="1294" />
-    <option name="height" value="1407" />
+    <option name="height" value="1167" />
   </component>
   <component name="ProjectView">
     <navigator currentView="UnityExplorer" proportions="" version="1">
@@ -194,12 +206,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598493508996</updated>
-      <workItem from="1598493510214" duration="5988000" />
+      <workItem from="1598493510214" duration="6579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5988000" />
+    <option name="totallyTimeSpent" value="6579000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -211,7 +223,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
+    <frame x="844" y="0" width="1294" height="1167" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -299,7 +311,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/SimpleEnemy.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <marker date="1598497754255" expanded="false" signature="6:78" ph="..." />
             <marker date="1598497754255" expanded="true" signature="215:453" ph="{...}" />
@@ -334,6 +346,15 @@
             <marker date="1598499551807" expanded="true" signature="985:1048" ph="{...}" />
             <marker date="1598499551807" expanded="true" signature="1488:1539" ph="{...}" />
             <marker date="1598499551807" expanded="true" signature="1622:2064" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../FleeBusterMechanic/Assets/Scripts/UITimer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
